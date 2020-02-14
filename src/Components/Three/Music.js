@@ -65,7 +65,7 @@ export default function SpacingGrid() {
             <Card className={classes.paper}  >
               <CardActionArea onClick={handleResize}>
               <div>
-                <img src={require('../../tokyo.jpg')} style={{width: 310, height: 310}}/>
+                <img src={require('../../assets/tokyo.jpg')} style={{width: 310, height: 310}}/>
                 </div>
               </CardActionArea>
             </Card>
@@ -109,7 +109,7 @@ export default function SpacingGrid() {
           <Grid item>
             <Card className={classes.paper}  >
               <CardActionArea onClick={handleResize2}>
-              <img src={require('../../TUNE_COVERART.jpg')} style={{ width: 310, height: 310 }} />
+                  <img src={require('../../assets/TUNE_COVERART.jpg')} style={{ width: 310, height: 310 }} />
               </CardActionArea>
             </Card>
             {shown2 ?

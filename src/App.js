@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar'
-import Three from './Components/Three/Three'
+import Three from './Components/Three/Music'
 import { Avatar, Icon } from 'antd';
 import FadeIn from 'react-fade-in';
 import './App.css';
@@ -20,7 +20,7 @@ function App(props) {
           <div className="home-logo">
             <Avatar
               size={130}
-              src={require('./pluck.png')}
+              src={require('./assets/pluck.png')}
               className={"home-logo"} />
             <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue' }}>
               tune.
@@ -40,7 +40,7 @@ function App(props) {
         <div className="home-logo">
           <Avatar
             size={130}
-            src={require('./pluck.png')}
+              src={require('./assets/pluck.png')}
             className={"home-logo"} />
           <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue' }}>
             tune.
@@ -60,7 +60,7 @@ function App(props) {
         <div className="home-logo">
           <Avatar
             size={130}
-            src={require('./pluck.png')}
+              src={require('./assets/pluck.png')}
             className={"home-logo"} />
           <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue' }}>
             tune.
