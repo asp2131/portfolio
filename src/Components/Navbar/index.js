@@ -1,43 +1,45 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import LeftMenu from './LeftMenu'
 import RightMenu from './RightMenu'
 import { Drawer, Button } from 'antd';
 import '../Home.css'
 
-class Navbar extends Component {
-	state = {
+function Navbar(props){
+
+
+	const [state, setState] = useState({
     current: 'mail',
     visible: false
-  }
-  showDrawer = () => {
-    this.setState({
+  })
+  const showDrawer = () => {
+    setState({
       visible: true,
     });
   };
 
-  onClose = () => {
-    this.setState({
+  const onClose = () => {
+    setState({
       visible: false,
     });
   };
 
-  render() {
+  
     return (
         <nav className="menuBar">
 			<div style={{ display: 'flex', justifyContent: 'center'}}> 
 				<ul >
-					<li class="nav-li">
-            <Button size={"large"}>
+					<li className="nav-li">
+            <Button size={"large"} onClick={() => {props.changeView("Music")}}>
 						Music
             </Button>
 					</li>
-					<li class="nav-li">
-              <Button size={"large"}>
-						About
+					<li className="nav-li">
+              <Button size={"large"} onClick={() => { props.changeView("Gallery") }}>
+						Gallery
             </Button>
 					</li>
-					<li class="nav-li">
-              <Button size={"large"}>
+					<li className="nav-li">
+              <Button size={"large"} onClick={() => { props.changeView("Booking") }}>
 						Booking
             </Button>
 					</li>
@@ -45,7 +47,6 @@ class Navbar extends Component {
 			</div>
         </nav>
     );
-  }
 }
 
 export default Navbar;

@@ -69,7 +69,7 @@ export default function SpacingGrid() {
             </Card>
             <div>
               {shown1 ?
-                <div style={{
+                <div  style={{
                   marginBottom: '16px'
                 }}>
                   <p style={
