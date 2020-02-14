@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar'
 import Three from './Components/Three/Three'
 import { Avatar, Icon } from 'antd';
+import FadeIn from 'react-fade-in';
 import './App.css';
 
 function App(props) {
@@ -27,7 +28,9 @@ function App(props) {
           </div>
           <Navbar changeView={changeView}/>
           <div style={{ paddingTop: '64px' }}>
-            <Three />
+            <FadeIn transitionDuration={800}>
+              <Three />
+            </FadeIn>
           </div>
         </div>
       );
@@ -45,7 +48,9 @@ function App(props) {
         </div>
         <Navbar changeView={changeView}/>
         <div style={{ paddingTop: '64px' }}>
-          {/* <Three /> */}
+            <FadeIn>
+              {/* <Three /> */}
+            </FadeIn>
         </div>
       </div>
       )
@@ -63,7 +68,9 @@ function App(props) {
         </div>
         <Navbar changeView={changeView}/>
         <div style={{ paddingTop: '64px' }}>
-          {/* <Three /> */}
+            <FadeIn>
+              {/* <Three /> */}
+            </FadeIn>
         </div>
       </div>
       )

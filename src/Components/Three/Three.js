@@ -8,6 +8,7 @@ import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
+import FadeIn from 'react-fade-in';
 import '../Home.css'
 
 
@@ -40,21 +41,22 @@ export default function SpacingGrid() {
 
   const handleResize = () => {
     setShown1(!shown1);
-    if(height === 310){
-      height = 750
-      width = 750
-    }
+    // if(height === 310){
+    //   height = 750
+    //   width = 750
+    // }
   }
 
   const handleResize2 = () => {
     setShown2(!shown2);
-    if (height === 310) {
-      height = 750
-      width = 750
-    }
+    // if (height === 310) {
+    //   height = 750
+    //   width = 750
+    // }
   }
 
   return (
+    <FadeIn>
     <Grid container className={classes.root} spacing={0}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
@@ -69,6 +71,7 @@ export default function SpacingGrid() {
             </Card>
             <div>
               {shown1 ?
+                  <FadeIn>
                 <div  style={{
                   marginBottom: '16px'
                 }}>
@@ -97,6 +100,7 @@ export default function SpacingGrid() {
                       marginBottom: '4px'
                     }}>I produced this gem, listen here</a>
                 </div>
+                    </FadeIn>
                 : null
               }
             </div>
@@ -109,6 +113,7 @@ export default function SpacingGrid() {
               </CardActionArea>
             </Card>
             {shown2 ?
+                <FadeIn>
               <div>
                 <p style={{
                   display: 'flex',
@@ -133,6 +138,7 @@ export default function SpacingGrid() {
                   marginBottom: '4px'
                 }}>Coming Soon!</p>
               </div>
+                  </FadeIn>
               : null}
           </Grid>
 
@@ -140,5 +146,6 @@ export default function SpacingGrid() {
       </Grid>
       <Grid item xs={12} />
     </Grid>
+    </FadeIn>
   );
 }
