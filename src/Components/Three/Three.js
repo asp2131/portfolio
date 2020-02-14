@@ -6,15 +6,19 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
-import color from "@material-ui/core/colors/amber";
+import '../Home.css'
+
+
+let height = 310;
+let width = 310;
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
   paper: {
-    height: 310,
-    width: 310
+    height: height,
+    width: width
   },
   control: {
     padding: theme.spacing(0)
@@ -22,12 +26,33 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function SpacingGrid() {
-  const [spacing, setSpacing] = React.useState(2);
+  const [spacing, setSpacing] = React.useState(10);
+  const [shown1, setShown1] = React.useState(false);
+  const [shown2, setShown2] = React.useState(false);
+  const [demension, setDemension] = React.useState({height: height, width: width});
   const classes = useStyles();
 
   const handleChange = event => {
     setSpacing(Number(event.target.value));
   };
+
+  const handleResize = () => {
+    setShown1(!shown1);
+    console.log("hello")
+    if(height === 310){
+      height = 750
+      width = 750
+    }
+  }
+
+  const handleResize2 = () => {
+    setShown2(!shown2);
+    console.log("hello")
+    if (height === 310) {
+      height = 750
+      width = 750
+    }
+  }
 
   return (
     <Grid container className={classes.root} spacing={0}>
@@ -35,8 +60,13 @@ export default function SpacingGrid() {
         <Grid container justify="center" spacing={spacing}>
          
             <Grid item>
-              <Paper className={classes.paper} >
+            <Paper className={classes.paper} onClick={handleResize} >
+              <div>
                 <img src={require('../../tokyo.jpg')} style={{width: 310, height: 310}}/>
+              { shown1 ?
+                <div style={{
+                  marginBottom: '16px'
+                }}>
                 <p style={
                           {
                           display: 'flex', 
@@ -51,7 +81,7 @@ export default function SpacingGrid() {
                           justifyContent: 'center',
                           fontWeight: 'bold',
                           fontSize: '20x',
-                          marginBottom: '16px'
+                          marginBottom: '6px'
                         }}>Produced, Mixed, Wrote</p>
               <a href="https://open.spotify.com/track/5MCOgFwTZ0YovAtr1UwV6q"
                 style={{
@@ -60,35 +90,43 @@ export default function SpacingGrid() {
                           fontWeight: 'bold',
                           fontSize: '20x',
                           marginBottom: '16px'
-                        }}>I produced this gem, listen here</a>
+                        }}>I produced this gem, listen here</a> 
+                </div>
+                        : null
+                        }
+                </div>
               </Paper>
             </Grid>
           
           <Grid item>
-            <Paper className={classes.paper} >
+            <Paper className={classes.paper} onClick={handleResize2} >
               <img src={require('../../TUNE_COVERART.jpg')} style={{ width: 310, height: 310 }} />
-              <p style={{
-                display: 'flex',
-                justifyContent: 'center',
-                fontWeight: 'bold',
-                fontSize: '20x',
-                marginBottom: '4px',
-                marginTop: '6px'
-              }}>{`tune. - Come Vibe`}</p>
-              <p style={{
-                display: 'flex',
-                justifyContent: 'center',
-                fontWeight: 'bold',
-                fontSize: '20x',
-                marginBottom: '16px'
-              }}>Produced, Mixed, Wrote</p>
-              <p style={{
-                display: 'flex',
-                justifyContent: 'center',
-                fontWeight: 'bold',
-                fontSize: '24x',
-                marginBottom: '16px'
-              }}>Coming Soon!</p>
+            { shown2 ? 
+              <div>
+                <p style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  fontWeight: 'bold',
+                  fontSize: '20x',
+                  marginBottom: '4px',
+                  marginTop: '6px'
+                }}>{`tune. - Come Vibe`}</p>
+                <p style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  fontWeight: 'bold',
+                  fontSize: '20x',
+                  marginBottom: '6px'
+                }}>Produced, Mixed, Wrote</p>
+                <p style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  fontWeight: 'bold',
+                  fontSize: '24x',
+                  marginBottom: '16px'
+                }}>Coming Soon!</p> 
+                </div>
+                : null }
             </Paper>
           </Grid>
 
