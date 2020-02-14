@@ -27,13 +27,19 @@ class Navbar extends Component {
 			<div style={{ display: 'flex', justifyContent: 'center'}}> 
 				<ul >
 					<li class="nav-li">
+            <Button size={"large"}>
 						Music
+            </Button>
 					</li>
 					<li class="nav-li">
+              <Button size={"large"}>
 						About
+            </Button>
 					</li>
 					<li class="nav-li">
+              <Button size={"large"}>
 						Booking
+            </Button>
 					</li>
 				</ul>
 			</div>
