@@ -12,16 +12,16 @@ import FadeIn from 'react-fade-in';
 import '../Home.css'
 
 
-let height = 310;
-let width = 310;
+let height = 800;
+let width = 800;
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
     },
     paper: {
-        height: height,
-        width: width
+        height: 'auto',
+        width: '100%'
     },
     control: {
         padding: theme.spacing(0)
@@ -38,19 +38,19 @@ export default function SpacingGrid() {
     const images = [];
 
     return (
-        <FadeIn>
+        <FadeIn transitionDuration={500}>
             <Grid container className={classes.root} spacing={0}>
                 <Grid item xs={12}>
                     <Grid container justify="center" spacing={spacing}>
 
                         <Grid item>
-                            <Card className={classes.paper}  >
-                                <CardActionArea onClick={handleResize}>
-                                    <div>
-                                        <img src={require('../../tokyo.jpg')} style={{ width: 310, height: 310 }} />
-                                    </div>
-                                </CardActionArea>
-                            </Card>
+                            
+                                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: "24px" }}>
+                                    <img src={require('../../assets/gallery1.jpg')} style={{ width: '50%', height: '50%' }} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <img src={require('../../assets/gallery2.jpeg')} style={{ width: '50%', height: '50%' }} />
+                                </div>
                         </Grid>
                     </Grid>
                 </Grid>

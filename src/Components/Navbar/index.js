@@ -39,9 +39,11 @@ function Navbar(props){
             </Button>
 					</li>
 					<li className="nav-li">
-              <Button size={"large"} onClick={() => { props.changeView("Booking") }}>
-						Booking
-            </Button>
+              <form action="mailto:akinpds@gmail.com" method="post">
+                <Button size={"large"} onClick={() => {window.location.href='mailto:akinpds@gmail.com'}}>
+                  Booking
+                </Button>
+              </form>
 					</li>
 				</ul>
 			</div>

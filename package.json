@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.2",
+    "@material-ui/icons": "^4.9.1",
     "antd": "^3.8.2",
+    "rc-footer": "^0.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-fade-in": "^0.1.8",
