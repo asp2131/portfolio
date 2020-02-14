@@ -6,6 +6,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
 import '../Home.css'
 
 
@@ -26,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function SpacingGrid() {
-  const [spacing, setSpacing] = React.useState(10);
+  const [spacing, setSpacing] = React.useState(2);
   const [shown1, setShown1] = React.useState(false);
   const [shown2, setShown2] = React.useState(false);
   const [demension, setDemension] = React.useState({height: height, width: width});
@@ -38,7 +40,6 @@ export default function SpacingGrid() {
 
   const handleResize = () => {
     setShown1(!shown1);
-    console.log("hello")
     if(height === 310){
       height = 750
       width = 750
@@ -47,7 +48,6 @@ export default function SpacingGrid() {
 
   const handleResize2 = () => {
     setShown2(!shown2);
-    console.log("hello")
     if (height === 310) {
       height = 750
       width = 750
@@ -60,48 +60,55 @@ export default function SpacingGrid() {
         <Grid container justify="center" spacing={spacing}>
          
             <Grid item>
-            <Paper className={classes.paper} onClick={handleResize} >
+            <Card className={classes.paper}  >
+              <CardActionArea onClick={handleResize}>
               <div>
                 <img src={require('../../tokyo.jpg')} style={{width: 310, height: 310}}/>
-              { shown1 ?
+                </div>
+              </CardActionArea>
+            </Card>
+            <div>
+              {shown1 ?
                 <div style={{
                   marginBottom: '16px'
                 }}>
-                <p style={
-                          {
-                          display: 'flex', 
-                          justifyContent: 'center',
-                          fontWeight: 'bold', 
-                          fontSize: '20x', 
-                          marginBottom: '4px',
-                          marginTop: '6px'
-                          }}>{`tune. - TOKYO!`}</p>
-                <p style={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          fontWeight: 'bold',
-                          fontSize: '20x',
-                          marginBottom: '6px'
-                        }}>Produced, Mixed, Wrote</p>
-              <a href="https://open.spotify.com/track/5MCOgFwTZ0YovAtr1UwV6q"
-                style={{
-                          display: 'flex',
-                          justifyContent: 'center',
-                          fontWeight: 'bold',
-                          fontSize: '20x',
-                          marginBottom: '16px'
-                        }}>I produced this gem, listen here</a> 
+                  <p style={
+                    {
+                      display: 'flex',
+                      justifyContent: 'center',
+                      fontWeight: 'bold',
+                      fontSize: '20x',
+                      marginBottom: '4px',
+                      marginTop: '6px'
+                    }}>{`tune. - TOKYO!`}</p>
+                  <p style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    fontWeight: 'bold',
+                    fontSize: '20x',
+                    marginBottom: '6px'
+                  }}>Produced, Mixed, Wrote</p>
+                  <a href="https://open.spotify.com/track/5MCOgFwTZ0YovAtr1UwV6q"
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      fontWeight: 'bold',
+                      fontSize: '20x',
+                      marginBottom: '4px'
+                    }}>I produced this gem, listen here</a>
                 </div>
-                        : null
-                        }
-                </div>
-              </Paper>
+                : null
+              }
+            </div>
             </Grid>
           
           <Grid item>
-            <Paper className={classes.paper} onClick={handleResize2} >
+            <Card className={classes.paper}  >
+              <CardActionArea onClick={handleResize2}>
               <img src={require('../../TUNE_COVERART.jpg')} style={{ width: 310, height: 310 }} />
-            { shown2 ? 
+              </CardActionArea>
+            </Card>
+            {shown2 ?
               <div>
                 <p style={{
                   display: 'flex',
@@ -123,11 +130,10 @@ export default function SpacingGrid() {
                   justifyContent: 'center',
                   fontWeight: 'bold',
                   fontSize: '24x',
-                  marginBottom: '16px'
-                }}>Coming Soon!</p> 
-                </div>
-                : null }
-            </Paper>
+                  marginBottom: '4px'
+                }}>Coming Soon!</p>
+              </div>
+              : null}
           </Grid>
 
         </Grid>
