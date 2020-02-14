@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Components/Navbar'
+import Three from './Components/Three/Three'
 import { Avatar, Icon } from 'antd';
 import './App.css';
 
@@ -19,6 +20,9 @@ function App(props) {
                 </div>
         </div>
         <Navbar />
+        <div style={{paddingTop: '64px'}}>
+        <Three />
+        </div>
       </div>
     );
 }
