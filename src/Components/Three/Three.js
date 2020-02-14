@@ -29,16 +29,22 @@ export default function SpacingGrid() {
   };
 
   return (
-    <Grid container className={classes.root} spacing={2}>
+    <Grid container className={classes.root} spacing={0}>
       <Grid item xs={12}>
         <Grid container justify="center" spacing={spacing}>
-          {[0, 1, 2].map(value => (
-            <Grid key={value} item>
+         
+            <Grid item>
               <Paper className={classes.paper} >
-              <img />
+                <img src={require('../../tokyo.jpg')} style={{width: 310, height: 310}}/>
               </Paper>
             </Grid>
-          ))}
+          
+          <Grid item>
+            <Paper className={classes.paper} >
+              <img src={require('../../TUNE_COVERART.jpg')} style={{ width: 310, height: 310 }} />
+            </Paper>
+          </Grid>
+
         </Grid>
       </Grid>
       <Grid item xs={12} />
