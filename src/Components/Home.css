@@ -1,11 +1,19 @@
 .nav-li {
      display: inline-block;
-     padding: 20px;
-     font-family:'Helvetica Neue';
-     font-size: 24px;
-     color: olivedrab;
+     padding: 24px;
+     padding-right: 40px;
+      font-weight: 900;
 }
 
 .album-space {
     padding: 58px;
 }
+
+button {
+   font-family: sans-serif;
+     font-weight: 900;
+     font-size: 24px;
+     color: white;
+     background-color: black;
+}
+

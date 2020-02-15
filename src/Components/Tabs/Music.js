@@ -82,14 +82,16 @@ export default function SpacingGrid() {
                       fontWeight: 'bold',
                       fontSize: '20x',
                       marginBottom: '4px',
-                      marginTop: '6px'
+                      marginTop: '6px',
+                      color: 'white'
                     }}>{`tune. - TOKYO!`}</p>
                   <p style={{
                     display: 'flex',
                     justifyContent: 'center',
                     fontWeight: 'bold',
                     fontSize: '20x',
-                    marginBottom: '6px'
+                    marginBottom: '6px',
+                    color: 'white'
                   }}>Produced, Mixed, Wrote</p>
                   <a href="https://open.spotify.com/track/5MCOgFwTZ0YovAtr1UwV6q"
                     style={{
@@ -121,21 +123,24 @@ export default function SpacingGrid() {
                   fontWeight: 'bold',
                   fontSize: '20x',
                   marginBottom: '4px',
-                  marginTop: '6px'
+                  marginTop: '6px',
+                  color: 'white'
                 }}>{`tune. - Come Vibe`}</p>
                 <p style={{
                   display: 'flex',
                   justifyContent: 'center',
                   fontWeight: 'bold',
                   fontSize: '20x',
-                  marginBottom: '6px'
+                  marginBottom: '6px',
+                  color: 'white'
                 }}>Produced, Mixed, Wrote</p>
                 <p style={{
                   display: 'flex',
                   justifyContent: 'center',
                   fontWeight: 'bold',
                   fontSize: '24x',
-                  marginBottom: '4px'
+                  marginBottom: '4px',
+                  color: 'red'
                 }}>Coming Soon!</p>
               </div>
                   </FadeIn>

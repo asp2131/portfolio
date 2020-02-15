@@ -27,7 +27,7 @@ function App(props) {
               size={130}
               src={require('./assets/pluck.png')}
               className={"home-logo"} />
-            <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue' }}>
+            <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue', color: 'white' }}>
               tune.
                 </div>
           </div>
@@ -42,7 +42,7 @@ function App(props) {
             columns={[
               {
                 icon: (
-                  <IconButton onClick={() => { window.location.href ='https://www.instagram.com/tuneperiod/'}}>
+                  <IconButton color="secondary" onClick={() => { window.location.href ='https://www.instagram.com/tuneperiod/'}}>
                     <InstagramIcon fontSize="large"/>
                   </IconButton>
                 ),
@@ -50,8 +50,8 @@ function App(props) {
               },
                 {
                   icon: (
-                    <IconButton onClick={() => { window.location.href ='https://twitter.com/pilottune' }}>
-                      <TwitterIcon fontSize="large" color="action"/>
+                    <IconButton  onClick={() => { window.location.href ='https://twitter.com/pilottune' }}>
+                      <TwitterIcon fontSize="large" color="secondary"/>
                     </IconButton>
                   ),
                   title: '语雀'
@@ -70,8 +70,8 @@ function App(props) {
             size={130}
               src={require('./assets/pluck.png')}
             className={"home-logo"} />
-          <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue' }}>
-            tune.
+            <div style={{ marginBottom: '16px', fontSize: '26px', fontWeight: 'bold', fontFamily: 'Helvetica Neue',color: 'white' }}>
+              tune.
                 </div>
         </div>
         <Navbar changeView={changeView}/>
@@ -84,7 +84,7 @@ function App(props) {
             columns={[
               {
                 icon: (
-                  <IconButton onClick={() => { window.location.href ='https://www.instagram.com/tuneperiod/' }}>
+                  <IconButton color="secondary" onClick={() => { window.location.href ='https://www.instagram.com/tuneperiod/' }}>
                     <InstagramIcon fontSize="large"/>
                   </IconButton>
                 ),
@@ -95,7 +95,7 @@ function App(props) {
               },
               {
                 icon: (
-                  <IconButton onClick={() => { window.location.href = 'https://twitter.com/pilottune' }}>
+                  <IconButton color="secondary" onClick={() => { window.location.href = 'https://twitter.com/pilottune' }}>
                     <TwitterIcon fontSize="large" color="action" />
                   </IconButton>
                 ),
