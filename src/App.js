@@ -80,6 +80,7 @@ function App(props) {
               <Gallery />
             </FadeIn>
         </div>
+          <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '64px' }}>
           <Footer
             columns={[
               {
@@ -96,7 +97,7 @@ function App(props) {
               {
                 icon: (
                   <IconButton color="secondary" onClick={() => { window.location.href = 'https://twitter.com/pilottune' }}>
-                    <TwitterIcon fontSize="large" color="action" />
+                    <TwitterIcon fontSize="large" />
                   </IconButton>
                 ),
                 title: '语雀'
@@ -104,6 +105,7 @@ function App(props) {
             ]}
             bottom=""
           />
+          </div>
       </div>
       )
     } 
