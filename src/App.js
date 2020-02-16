@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar'
 import Music from './Components/Tabs/Music'
 import Gallery from './Components/Tabs/Gallery'
+import Player from './Components/MusicPlayer/MusicPlayer'
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { Avatar, Icon } from 'antd';
@@ -32,12 +33,14 @@ function App(props) {
                 </div>
           </div>
           <Navbar changeView={changeView}/>
+          <Player />
           <div style={{ paddingTop: '64px' }}>
             <FadeIn transitionDuration={800}>
               <Music />
             </FadeIn>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '64px' }}>
+           
           <Footer 
             columns={[
               {
