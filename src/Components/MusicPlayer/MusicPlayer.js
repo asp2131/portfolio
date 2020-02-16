@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Playlist from 'react-mp3-player';
+import Playlist from 'react-mp3-player'; 
 
 export default function AudioPlayer(){
     const tracks = [{ img: require('../../assets/TUNE_COVERART.jpg'), name: 'ComeVibe', desc: 'produced by tune.', src: 'https://res.cloudinary.com/https-pilot-tune-herokuapp-com/video/upload/v1581756932/come_vibe_final_vtfuqy.wav' },
