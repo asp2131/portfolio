@@ -134,14 +134,14 @@ export default function SpacingGrid() {
                   marginBottom: '6px',
                   color: 'white'
                 }}>Produced, Mixed, Wrote</p>
-                <p style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  fontWeight: 'bold',
-                  fontSize: '24x',
-                  marginBottom: '4px',
-                  color: 'red'
-                }}>Coming Soon!</p>
+                    <a href="https://open.spotify.com/album/4ty8peY5iZgCAKWMVwOihd"
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        fontWeight: 'bold',
+                        fontSize: '20x',
+                        marginBottom: '4px'
+                      }}>I produced this gem as well, listen here</a>
               </div>
                   </FadeIn>
               : null}

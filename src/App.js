@@ -33,7 +33,7 @@ function App(props) {
                 </div>
           </div>
           <Navbar changeView={changeView}/>
-          <Player />
+          {/* <Player /> */}
           <div style={{ paddingTop: '64px' }}>
             <FadeIn transitionDuration={800}>
               <Music />
