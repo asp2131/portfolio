@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import LeftMenu from './LeftMenu'
-import RightMenu from './RightMenu'
 import { Drawer, Button } from 'antd';
 import '../Home.css'
 import { withTheme } from '@material-ui/core';
