@@ -129,5 +129,9 @@ button {
 }
 
 body {
+  background-color: rgb(52,43, 50);
+}
+
+canvas {
   background-color: rgb(12, 14, 15);
 }
