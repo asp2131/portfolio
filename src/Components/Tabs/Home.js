@@ -1,8 +1,6 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import FormLabel from "@material-ui/core/FormLabel";
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/'
+import Gallery from './Gallery'
 import ThreeScene from '../Anime'
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -10,62 +8,11 @@ import { Avatar, Icon } from 'antd';
 import IconButton from "@material-ui/core/IconButton";
 import Footer from 'rc-footer';
 import Anime, { anime } from 'react-anime';
-import CardActionArea from "@material-ui/core/CardActionArea";
 import FadeIn from 'react-fade-in';
-import '../Home.css'
+import { MTLModel, OBJModel, DirectionLight } from 'react-3d-viewer'
+import CardActionArea from "@material-ui/core/CardActionArea";
 
-
-let height = 800;
-let width = 800;
-
-const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1
-    },
-    paper: {
-        height: 'auto',
-        width: '100%'
-    },
-    control: {
-        padding: theme.spacing(0)
-    }
-}));
-
-    
-
-function SpacingGrid() {
-    const [spacing, setSpacing] = React.useState(2);
-    const [shown1, setShown1] = React.useState(false);
-    const [shown2, setShown2] = React.useState(false);
-    const [demension, setDemension] = React.useState({ height: height, width: width });
-    const classes = useStyles();
-
-    const images = [];
-
-    return (
-        <FadeIn transitionDuration={500}>
-            <Grid container className={classes.root} spacing={0}>
-                <Grid item xs={12}>
-                    <Grid container justify="center" spacing={spacing}>
-
-                        <Grid item>
-                            
-                                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: "24px" }}>
-                                    <img src={require('../../assets/gallery1.jpg')} style={{ width: '50%', height: '50%' }} />
-                                </div>
-                                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                    <img src={require('../../assets/gallery2.jpeg')} style={{ width: '50%', height: '50%' }} />
-                                </div>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item xs={12} />
-            </Grid>
-        </FadeIn>
-    );
-}
-
-export default function GalleryView(props) {
+export default function Home(props){
     let updates = 0;
     return (
         <div>
@@ -94,10 +41,9 @@ export default function GalleryView(props) {
                 </div>
             </div>
             <Navbar changeView={props.changeView} />
-            {/* <Player /> */}
-            <div style={{ paddingTop: '64px' }}>
+            <div style={{ paddingTop: '64px', display: 'flex', justifyContent: 'center' }} className={'content'}>
                 <FadeIn transitionDuration={800}>
-                    <SpacingGrid />
+                    <ThreeScene />
                 </FadeIn>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '64px' }}>
