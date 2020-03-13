@@ -1,8 +1,7 @@
 .nav-li {
-    
      display: inline-block;
-     padding: 6px;
-     padding-right: 6px;
+     padding: 16px;
+     padding-right: 40px;
       font-weight: 900;
 }
 
