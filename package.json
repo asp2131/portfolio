@@ -34,7 +34,6 @@
   },
   "scripts": {
     "start": "nodemon server/index.js",
-    "build": "nodemon server/index.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
