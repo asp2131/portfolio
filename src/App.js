@@ -17,18 +17,14 @@ import './App.css';
 
 function App(props) {
 
-    const [view, setView] = useState('Home');
+    const [view, setView] = useState('Music');
   var updates = 0;
 
     const changeView = (newView) => {
       setView(newView);
     }
 
-    if(view === "Home"){
-      return (
-        <Home changeView={changeView}/>
-      )
-    }
+   
     if(view === "Music"){
       return (
         <Music changeView={changeView}/>
