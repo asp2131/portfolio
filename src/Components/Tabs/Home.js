@@ -27,7 +27,7 @@ export default function Home(props){
                     direction={"alternate"}
                     loopBegin={(anim) => { updates++; }}
                     loopComplete={(anim) => { updates++; }}>
-                    <CardActionArea onClick={() => props.changeView("Home")}>
+                    <CardActionArea onClick={() => props.changeView("Music")}>
                         <Avatar
                             size={130}
                             src={require('../../assets/pilot.png')}
