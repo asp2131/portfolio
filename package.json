@@ -28,7 +28,7 @@
     "react-mp3-player": "^0.8.2",
     "react-scripts": "1.1.4",
     "react-transition-group": "^1.2.1",
-    "three": "^0.113.2",
+    "three": "^0.137.0",
     "three-mtl-loader": "1.0.2",
     "three-obj-loader": "1.1.3"
   },
